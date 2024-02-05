@@ -75,7 +75,7 @@ class Main extends Phaser.Scene {
 
   //Функція для створення блоку труби
   addOnePipe(x, y) {
-    var pipe = this.physics.add.sprite(x, y, "cactus");
+    var pipe = this.physics.add.sprite(x, y, "pipe");
     pipe.setOrigin(0, 0);
     this.pipes.add(pipe);
     pipe.body.velocity.x = -300;
@@ -101,7 +101,6 @@ class Main extends Phaser.Scene {
     this.pipes.children.each(function (pipe) {
       pipe.body.velocity.x = 0;
     });
-    this.scene.restart();
   }
 }
 
